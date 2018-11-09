@@ -1,15 +1,23 @@
 import ItunesService from "./itunes-service.js";
+import Song from "../../models/Song.js";
 
 //PRIVATE
 
 const itunesService = new ItunesService()
 
+
+
 function drawSongs(results) {
+  let template = ""
   console.log(results)
   //YOUR CODING STARTS HERE
+  for (let i = 0; i < results.length; i++) {
+    const songs = results[i];
+  } results.forEach(Song => {
+    template += `<p>${Song.title}</p>`
+  });
 
-
-
+  document.getElementById("songsList").innerHTML = template
 }
 
 

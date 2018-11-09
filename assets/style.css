@@ -1,0 +1,21 @@
+.bg-image{
+  display: flex;
+  background-size: cover;
+  background-image: url(./img/open-road.jpg.jpg);
+  height: 100vh;
+  width: auto;
+  display: center;
+}
+
+.hero-text{
+  display: flex;
+ align-items: center;
+ color: white;
+ text-shadow: 0, 0, 10px, black;
+
+}
+
+.search-bar{
+  display: flex;
+  align-items: center;
+}
