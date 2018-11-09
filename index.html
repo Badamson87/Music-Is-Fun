@@ -12,27 +12,27 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body>
+<body class="bg-image">
 
-    <div class="container-fluid bg-image">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="hero-text">Open Roads</h1>
+                        <h3 class="hero-text m-3 fTop">Open Roads</h3>
                     </div>
                     <div class="searc-bar">
                         <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
                             <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                            <div class="form-group fTop2">
+                                <input type="text" class="form-control m-3" name="artist" placeholder="Artist Name" />
                                 <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-6" id="songs">
+            <div class="col-8" id="songs">
                 <ul id="songsList">
                     <!-- list items -->
                 </ul>
