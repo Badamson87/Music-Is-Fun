@@ -3,8 +3,7 @@
   background-size: cover;
   background-image: url(./img/open-road.jpg.jpg);
   height: 100vh;
-  width: auto;
-  display: center;
+  background-position: center bottom;
   background-attachment: fixed
   
 }

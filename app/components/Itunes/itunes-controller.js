@@ -1,5 +1,4 @@
 import ItunesService from "./itunes-service.js";
-import song from "../../models/Song.js";
 
 //PRIVATE
 
@@ -15,7 +14,7 @@ function drawSongs(results) {
     const songs = results[i];
   } results.forEach(Song => {
     template += `
-   <div col-4 class="card" style="width: 21rem;">
+   <div class="card m-3" style="width: 21rem;">
   <img class="card-img-top" src="${Song.albumArt}" alt="Card image cap">
   <div class="card-body">
     <h5 class="${Song.artist}">${Song.artist}</h5>
