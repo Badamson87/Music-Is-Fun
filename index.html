@@ -15,31 +15,15 @@
 <body class="bg-image">
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="hero-text m-3 fTop">Open Roads</h3>
-                    </div>
-                    <div class="searc-bar">
-                        <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-                            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-                            <div class="form-group fTop2">
-                                <input type="text" class="form-control m-3" name="artist" placeholder="Artist Name" />
-                                <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8" id="songs">
-                <div class="row" id="songsList">
 
-
-
-                </div>
-            </div>
-        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <h3 class="hero-text">Open Roads</h3>
+            <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                <input class="form-control mr-sm-2" type="text" name="artist" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary-success my-2 my-sm-0" type="submit" id="get-music-button">Search</button>
+            </form>
+        </nav>
+        <div class="row justify-content-center " id="songsList"></div>
     </div>
 
 

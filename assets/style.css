@@ -11,22 +11,11 @@
 .hero-text{
   display: flex;
  color: white;
- text-shadow: 0 0 10px black;
+ text-shadow: 0 0 5px white;
 }
 
-.search-bar{
-  display: flex;
-  align-items: center;
-}
+@media only screen and (min-width: 600px){
 
-.fTop{
-  position: fixed;
-  left: 2rem;
-  top: 0
-}
 
-.fTop2{
-  position: fixed;
-  top: 3rem;
-  left: 2rem
+
 }
