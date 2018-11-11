@@ -6,27 +6,39 @@ const itunesService = new ItunesService()
 
 
 
-function drawSongs(results) {
+function drawSongs(songs) {
   let template = ""
-  console.log(results)
   //YOUR CODING STARTS HERE
-  for (let i = 0; i < results.length; i++) {
-    const songs = results[i];
-  } results.forEach(Song => {
+  songs = songs.slice(0, 12)   // removing extra songs because of lagging preview
+  songs.forEach(song => {
     template += `
    <div class="card m-3" style="width: 21rem;">
-  <img class="card-img-top" src="${Song.albumArt}" alt="Card image cap">
+  <img class="card-img-top" src="${song.albumArt}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="${Song.artist}">${Song.artist}</h5>
-    <p class="${Song.title}">${Song.title}</p>
-    <p class="${Song.price}">${Song.price}</p>
-   <audio controls source src="${Song.preview}" type ="audio/mpeg"></audio controls>
+    <h5 class="${song.artist}">${song.artist}</h5>
+    <p class="${song.title}">${song.title}</p>
+    <p class="${song.price}">${song.price}</p>
+   <audio controls source src="${song.preview}" type ="audio/mpeg"></audio controls>
   </div>
 </div>
     `
   });
+  document.getElementById("songsList").innerHTML = template;
+  singleAudio();
+}
 
-  document.getElementById("songsList").innerHTML = template
+// Making sure only one song plays at a time
+
+function singleAudio() {
+  let songResults = $('audio');
+  songResults.on('play', (e) => {
+    songResults.each((index, playButton) => {
+      if (playButton !== e.target) {
+        playButton.pause();
+      }
+    })
+  });
+
 }
 
 {/* <p>${Song.title}</p> */ }
@@ -48,6 +60,7 @@ class ItunesController {
 
 
 }
+
 
 
 export default ItunesController
